@@ -1,0 +1,164 @@
+.userDetails {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.imgWrapper {
+    object-fit: cover;
+    width: 150px;
+    position: relative;
+    margin-right: 50px;
+}
+
+.imgProfile {
+    border-radius: 5px;
+    height: 150px;
+}
+
+#about {
+    align-self: flex-start;
+    width: 50%;
+}
+
+.imgWrapper::after {
+    content: "Current Profile image";
+    font-size: 12px;
+    width: 500px;
+    position: absolute;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+}
+
+label,
+input {
+    font-size: 13px !important;
+    height: 30px;
+}
+
+/* textarea {
+    margin-top: 10px;
+    font-size: 14px;
+} */
+
+.jobdescription {
+    width: 100%;
+    margin-top: 10px;
+}
+
+hr {
+    margin: 10px 0;
+    border-width: 1px;
+}
+
+input {
+    border-radius: 5px !important;
+}
+
+label {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+fieldset {
+    margin-bottom: 1em !important;
+    border: 1px solid #666 !important;
+    padding: 10px !important;
+}
+
+legend {
+    padding: 1px 5px !important;
+    float: none;
+    width: auto;
+    font-size: 13px;
+}
+
+
+
+.fullContainer {
+    display: flex;
+    justify-content: space-between
+}
+
+.leftContainer {
+    width: 30%;
+}
+
+.rightContainer {
+    width: 55%;
+}
+
+.dateInput {
+    width: 100px;
+}
+
+.positionInput {
+    width: 230px;
+}
+
+.locationInput {
+    width: 40%;
+}
+
+.languages {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.languages img {
+    height: 20px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+.leftContainer fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.uploadPicture {
+    margin-left: auto;
+}
+
+.btnAdd,
+.btnRemove {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 999em;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.btnRemove {
+    background-color: crimson;
+}
+
+#submitBtn {
+    position: absolute;
+    top: 90%;
+    height: auto !important;
+    background-color: teal;
+    border: none;
+    color: white;
+    padding: 16px 32px !important;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out all;
+    box-shadow: 0px 0px 5px black;
+}
+
+#submitBtn:hover {
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.jobinfo {
+    margin-top: 5px;
+    width: 100%;
+    font-size: .9em;
+    height: 100px;
+}
