@@ -11,6 +11,7 @@ class CvController extends Controller
 {
     public function renderCV(Request $request)
     {           
+        // dd($request);
         $splitTechs = explode(',', $request->techskills);
         $splitSofts = explode(',', $request->softskills);
         
@@ -41,13 +42,13 @@ class CvController extends Controller
         }
 
         //Experiences values to retrieve
-        $expDate = Experiences::select('exp_date')->get()->pluck('exp_date')->toArray();        
-        $workplace = Experiences::select('workplace')->get()->pluck('workplace')->toArray();
-        $position = Experiences::select('position')->get()->pluck('position')->toArray();
-        $description = Experiences::select('description')->get()->pluck('description')->toArray();
+        $expDate = Experiences::select('exp_date')->where('user_id', Auth::user()->id)->get()->pluck('exp_date')->toArray();        
+        $workplace = Experiences::select('workplace')->where('user_id', Auth::user()->id)->get()->pluck('workplace')->toArray();
+        $position = Experiences::select('position')->where('user_id', Auth::user()->id)->get()->pluck('position')->toArray();
+        $description = Experiences::select('description')->where('user_id', Auth::user()->id)->get()->pluck('description')->toArray();
         //Educations values to retrieve
-        $educationDate = Educations::select('edu_date')->get()->pluck('edu_date')->toArray();
-        $location = Educations::select('location')->get()->pluck('location')->toArray();
+        $educationDate = Educations::select('edu_date')->where('user_id', Auth::user()->id)->get()->pluck('edu_date')->toArray();
+        $location = Educations::select('location')->where('user_id', Auth::user()->id)->get()->pluck('location')->toArray();
         
         return view(
             'cv',
