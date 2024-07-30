@@ -103,7 +103,7 @@
                 </div>
             </div>
             <div class="divLinkedin">
-                <img class="imgLinked" src="\images\linkedin.png" alt="linkedIn icon">
+                <img class="imgLinked" src={{asset("\images\linkedin.png")}} alt="linkedIn icon">
                 <a style="text-decoration: none;" href="{{Auth::user()->linkedin}}" target="_blank">{{Auth::user()->linkedin}}</a>
                 <!-- <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a> -->
             </div>

@@ -52,7 +52,7 @@
         <div class="mt-4" style="display:flex; justify-content:space-between; width:200%">
             <span style="margin-right: 5%; width:45%">
                 <x-input-label for="phone" :value="__('Phone')" />
-                <x-text-input id="phone" class="block mt-1 w-full" type="number" min="100000000" max="9999999999" name="phone" :value="old('phone', $user->phone)" />
+                <x-text-input id="phone" class="block mt-1 w-full" type="number" min="10000000" max="9999999999999" name="phone" :value="old('phone', $user->phone)" />
                 <x-input-error :messages="$errors->get('phone')" class="mt-2" />
             </span>
 
@@ -86,7 +86,7 @@
         <div>
             <x-input-label for="about" :value="__('Describe yourself and your motivations')" />
             <!-- <x-text-input id="about" name="about" type="text" class="mt-1 block w-full" :value="old('about', $user->about)" required autofocus autocomplete="about" /> -->
-            <textarea class="mt-2" style="width: 100%;" rows="4" name="about" id="about" :value="old('about', $user->about)"></textarea>
+            <textarea class="mt-2" style="width: 100%;" rows="4" name="about" id="about">{{Auth::user()->about}}</textarea>
             <x-input-error class="mt-2" :messages="$errors->get('about')" />            
         </div>
 
